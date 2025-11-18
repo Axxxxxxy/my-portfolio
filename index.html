@@ -7,33 +7,37 @@
   <title>NEONOVA Consulting | AI × Webサービス開発</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#E7F7FF',
-              100: '#C2ECFF',
-              200: '#85D8FF',
-              300: '#47C3FF',
-              400: '#12A4F9',
-              500: '#0080D7',
-              600: '#0065AE',
-              700: '#004C86',
-              800: '#00345D',
-              900: '#021D35'
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof tailwind !== 'undefined') {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brand: {
+                  50: '#E7F7FF',
+                  100: '#C2ECFF',
+                  200: '#85D8FF',
+                  300: '#47C3FF',
+                  400: '#12A4F9',
+                  500: '#0080D7',
+                  600: '#0065AE',
+                  700: '#004C86',
+                  800: '#00345D',
+                  900: '#021D35'
+                }
+              },
+              fontFamily: {
+                heading: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['"Noto Sans JP"', 'Inter', 'system-ui', 'sans-serif']
+              },
+              dropShadow: {
+                glow: '0 0 35px rgba(19, 132, 229, 0.45)'
+              }
             }
-          },
-          fontFamily: {
-            heading: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif'],
-            body: ['"Noto Sans JP"', 'Inter', 'system-ui', 'sans-serif']
-          },
-          dropShadow: {
-            glow: '0 0 35px rgba(19, 132, 229, 0.45)'
           }
-        }
+        };
       }
-    };
+    });
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
